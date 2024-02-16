@@ -1,6 +1,5 @@
 # Exercise 1
 
-
 ## ex_01
 
 寫出可以得到下方結果的 SQL 語句
@@ -8,7 +7,9 @@
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT lastname, firstname, jobtitle
+FROM employees
+WHERE jobTitle = 'Sales Rep';
 ```
 
 Output
@@ -45,7 +46,9 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT lastname, firstname, jobtitle, officeCode
+FROM employees
+WHERE firstName = 'Leslie';
 ```
 
 Output
@@ -67,7 +70,9 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT firstName, lastName, officeCode
+FROM employees
+WHERE officeCode IN (1, 2, 3)
 ```
 
 Output
@@ -90,7 +95,6 @@ Output
 10 rows in set (0.00 sec)
 ```
 
-
 ## ex_04
 
 寫出可以得到下方結果的 SQL 語句
@@ -98,7 +102,9 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT contactLastname, contactFirstname
+FROM customers
+ORDER BY contactLastName DESC, contactFirstName DESC;
 ```
 
 Output
@@ -119,7 +125,6 @@ Output
 ....
 ```
 
-
 ## ex_05
 
 寫出可以得到下方結果的 SQL 語句
@@ -127,7 +132,9 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT lastname, firstname, officeCode
+FROM employees
+WHERE officeCode IN (6, 7);
 ```
 
 Output
@@ -146,7 +153,6 @@ Output
 6 rows in set (0.00 sec)
 ```
 
-
 ## ex_06
 
 寫出可以得到下方結果的 SQL 語句
@@ -154,7 +160,9 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT lastname, firstname, jobtitle, officeCode
+FROM employees
+WHERE jobTitle = "Sales Rep" AND officeCode = 1;
 ```
 
 Output
@@ -169,7 +177,6 @@ Output
 2 rows in set (0.00 sec)
 ```
 
-
 ## ex_07
 
 寫出可以得到下方結果的 SQL 語句
@@ -177,7 +184,9 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT lastname
+FROM employees
+ORDER BY lastName;
 ```
 
 Output
@@ -202,7 +211,6 @@ Output
 19 rows in set (0.01 sec)
 ```
 
-
 ## ex_08
 
 寫出可以得到下方結果的 SQL 語句
@@ -210,7 +218,9 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT customername, country, state
+FROM customers
+WHERE country = "USA" AND state = "CA";
 ```
 
 Output
@@ -241,7 +251,10 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT customername, country, state, creditlimit
+FROM customers
+WHERE 
+    country = "USA" AND state = "CA" AND creditLimit >= 105000;
 ```
 
 Output
@@ -264,7 +277,9 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+SELECT officeCode, city, phone, country
+FROM offices
+WHERE country = "USA" OR country = "France";
 ```
 
 Output
